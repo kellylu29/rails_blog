@@ -28,11 +28,16 @@ class UsersController < ApplicationController
   end
 
   def update
-
+    @user = User.find_by_id(params[:id])
+    @user.update(user_params)
+    redirect_to user_path(@user)
   end
 
   def destroy
-
+    session[:user_id] = nil
+    user = User.find_by_id(params[:id])
+	  user.destroy
+	  redirect_to '/'
   end
 
   private

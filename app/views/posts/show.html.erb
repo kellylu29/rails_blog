@@ -4,15 +4,15 @@
     <p><%= @post.content %></p>
 
     <p>
-      <%= link_to "Show all posts", posts_path %>
-    </p>
-
-    <p>
       <%= link_to "Edit", edit_post_path(@post) %>
     </p>
 
+    <p>
+      <%= link_to "Show all posts", posts_path %>
+    </p>
+
     <div class ="comment-container">
-      <h2>Comments</h2>
+      <h2>Comments:</h2>
         <% @comments.each do |comment| %>
           <div class="each-comment">
             <p>

@@ -5,7 +5,13 @@
     <p>
       <b>Email:</b>
       <%= @user.email %> <br><br>
+    </p>
+
+    <p>
       <%= link_to "Edit", edit_user_path(@user) %>
+    </p>
+    <p>
+      <%= button_to "Delete", @user, :method => :delete, :class => 'submit' %>
     </p>
 
   </div>

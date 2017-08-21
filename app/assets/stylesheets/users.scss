@@ -9,7 +9,11 @@
   color: #7BFFC8;
 }
 
-.signup {
+.users-container a:hover {
+  color: #333;
+}
+
+.signup, .edit-user, .welcome {
   width: 40%;
   margin: 30px auto;
   text-align: center;

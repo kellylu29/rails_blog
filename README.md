@@ -1,24 +1,11 @@
-# README
+# Rails Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Build a basic blogging app in Rails.
 
-Things you may want to cover:
+There should be a User, Post, and Comment model.
 
-* Ruby version
+Criteria:
 
-* System dependencies
+* User model sign up, in, login, edit, delete
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Post and Comment model allow current user to post

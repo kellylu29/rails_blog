@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      redirect_to posts_path(@post)
+      redirect_to 'posts_path(@post)'
     else
       redirect_to '/posts'
     end
