@@ -1,14 +1,15 @@
+<div class="posts-container">
+  <div class="all-posts">
+    <% @posts.reverse_each do |post| %>
+      <div class="each-post">
+      	<h3><a href="/posts/<%= post.id %>"> <%= post.title %> </a></h3>
+      	<h4><a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h4>
 
-<div class="all-posts">
-  <% @posts.reverse_each do |post| %>
+      	<p><%= post.content %></p>
 
-  	<h3><a href="/posts/<%= post.id %>"> <%= post.title %> </a></h3>
-  	<h4><a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h4>
-
-  	<p><%= post.content %></p>
-
-    <p><%= link_to "Add Comment", new_comment_path(post_id: post.id) %></p>
-    <p><a href="/comments">View Comments</a></p>
-    <br>
-	<% end %>
+        <p><%= link_to "Add Comment", new_comment_path(post_id: post.id) %></p>
+        <br>
+      </div>
+  	<% end %>
+  </div>
 </div>

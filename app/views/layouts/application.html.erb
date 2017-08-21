@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>RailsBlog</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,19 +11,24 @@
 
   <body>
     <div class="nav">
-      <ul>
+      <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
-        <li><a href="/login">Login</a></li>
-        <li> <a href="/users/new">Sign Up</a></li>
-        <li><a href="/posts/new">New Post</a></li>
-        <li><a href="/logout">Logout</a></li>
+          <% if current_user %>
+            <li><a href="/posts/new">Add New Post</a></li>
+            <li class="right"><a href="/logout">Logout</a></li>
+            <li class="right"><a href="/users/<%= current_user.id %>">Current User: <%= current_user ? current_user.username : "No user signed in."%></a></li>
+          <% else %>
+            <li class="right"><a href="/login">Login</a></li>
+            <li class="right"><a href="/users/new">Signup</a></li>
+          <% end %>
+        </li>
       </ul>
     </div>
-    <div class="current-user">
+    <!-- <div class="current-user">
       <p>
         Current User: <%= current_user ? current_user.username : "No user signed in." %>
       </p>
-    </div>
+    </div> -->
     <%= yield %>
 
   </body>
