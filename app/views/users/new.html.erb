@@ -1,0 +1,21 @@
+<div class="signup">
+  <h1>Sign Up</h1>
+
+  <%= form_for @user, url: {action: "create"} do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br><br>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br><br>
+  <%= f.submit %>
+<% end %>
+
+<p>
+<%= link_to "Back to home", posts_path %>
+</p>
+
+</div>

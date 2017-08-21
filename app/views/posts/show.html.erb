@@ -1,0 +1,22 @@
+<div class="show-post">
+  <h1><%= @post.title %></h1>
+  <p><%= @post.content %></p>
+
+  <p>
+  <%= link_to "Show all posts", posts_path %>
+  </p>
+  <p>
+  <%= link_to "Edit", edit_post_path(@post) %>
+  </p>
+
+  <div class ="comment-container">
+    <h2>Comments</h2>
+    <% @comments.each do |comment| %>
+      <p>
+        <strong>Comment:</strong>
+        <%= comment.content %>
+      </p>
+    <% end %>
+  </div>
+
+</div>

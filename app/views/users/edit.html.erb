@@ -1,0 +1,21 @@
+<div class="edit-user">
+  <h1>Edit</h1>
+
+  <%= form_for @user do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br><br>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br><br>
+  <%= f.submit %>
+<% end %>
+
+<p>
+<%= link_to "Back to Profile", user_path(@user) %>
+</p>
+
+</div>

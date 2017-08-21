@@ -9,6 +9,21 @@
   </head>
 
   <body>
+    <div class="nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li> <a href="/users/new">Sign Up</a></li>
+        <li><a href="/posts/new">New Post</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+    <div class="current-user">
+      <p>
+        Current User: <%= current_user ? current_user.username : "No user signed in." %>
+      </p>
+    </div>
     <%= yield %>
+
   </body>
 </html>

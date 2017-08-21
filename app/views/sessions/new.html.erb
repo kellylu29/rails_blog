@@ -1,0 +1,19 @@
+<div class="login">
+  <h1>Log In</h1>
+
+  <%= form_for(:session, url: login_path)  do |f| %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br><br>
+  <%= f.submit %>
+<% end %>
+
+<p>
+<%= link_to "Back to home", posts_path %>
+</p>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="new-post">
+  <h1>Create new post</h1>
+
+  <%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br><br>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <br><br>
+  <%= f.submit %>
+<% end %>
+
+<p>
+<%= link_to "Back to posts", posts_path %>
+</p>
+
+</div>
