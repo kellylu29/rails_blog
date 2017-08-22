@@ -1,15 +1,16 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.comments-container{
+
+.comments-page {
   width: 100%;
 }
 
-.comments-container a {
+.comments-page a {
   color: #7BFFC8;
 }
 
-.comment {
+.comment-box {
   width: 40%;
   margin: 30px auto;
   text-align: center;
@@ -17,12 +18,7 @@
   padding: 10px
 }
 
-h3 {
-  font-size: 2em;
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-}
+// Form styles
 
 form {
   margin: 20px;
@@ -46,10 +42,4 @@ form {
     cursor: pointer;
 }
 
-.profile {
-  text-align: center;
-  border: 1px solid #333;
-  padding: 10px;
-  width: 40%;
-  margin: 30px auto;
-}
+// End form styles

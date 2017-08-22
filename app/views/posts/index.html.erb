@@ -1,9 +1,9 @@
-<div class="posts-container">
-  <div class="all-posts">
+<div class="posts-page">
+  <div class="show-posts">
     <% @posts.reverse_each do |post| %>
       <div class="each-post">
       	<h3><a href="/posts/<%= post.id %>"> <%= post.title %> </a></h3>
-      	<h4><a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h4>
+      	<h4><a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a></h4>
 
       	<p><%= post.content %></p>
 

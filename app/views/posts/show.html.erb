@@ -1,31 +1,32 @@
-<div class="posts-container">
-  <div class="all-posts">
+<div class="posts-page">
+  <div class="show-posts">
+
     <h1><%= @post.title %></h1>
     <p><%= @post.content %></p>
 
-    <p>
-      <%= link_to "Edit", edit_post_path(@post) %>
-    </p>
+    <p> <%= link_to "Edit", edit_post_path(@post) %> </p>
 
-    <p>
-      <%= link_to "Show all posts", posts_path %>
-    </p>
-
+    <p> <%= link_to "Show all posts", posts_path %> </p>
+<!-- Show comments under post -->
     <div class ="comment-container">
       <h2>Comments:</h2>
+
         <% @comments.each do |comment| %>
           <div class="each-comment">
             <p>
-              <strong>User:</strong><br>
+              <strong>User:</strong>
+              <br>
               <%= comment.user.username %>
             </p>
 
             <p>
-              <strong>Comment:</strong><br>
+              <strong>Comment:</strong>
+              <br>
               <%= comment.content %>
             </p>
           </div>
         <% end %>
     </div>
+
   </div>
 </div>

@@ -1,18 +1,20 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.users-container{
+
+.users-pages{
   width: 100%;
 }
 
-.users-container a {
+.users-pages a {
   color: #7BFFC8;
 }
 
-.users-container a:hover {
+.users-pages a:hover {
   color: #333;
 }
 
+// users/new, users/edit, users/index
 .signup, .edit-user, .welcome {
   width: 40%;
   margin: 30px auto;
@@ -21,13 +23,7 @@
   padding: 10px
 }
 
-h3 {
-  font-size: 2em;
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-}
-
+// Form styles
 form {
   margin: 20px;
 }
@@ -48,12 +44,4 @@ form {
 .submit:hover {
     background-color: #7BFFC8;
     cursor: pointer;
-}
-
-.profile {
-  text-align: center;
-  border: 1px solid #333;
-  padding: 10px;
-  width: 40%;
-  margin: 30px auto;
 }

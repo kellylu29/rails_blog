@@ -1,20 +1,13 @@
-<div class="posts-container">
-  <div class="new-post">
+<div class="posts-page">
+
+  <div class="submit-post">
+    
     <h1>Edit post</h1>
 
-    <%= form_for @post do |f| %>
-      <%= f.label :title, :class => 'title' %> <br>
-      <%= f.text_area :title, :class => 'title' %>
-      <br><br>
-      <%= f.label :content, :class => 'content' %> <br>
-      <%= f.text_area :content, :class => 'content' %>
-      <br><br>
-      <%= f.submit 'Submit Changes', :class => 'submit'%>
-    <% end %>
+    <%= render "form" %>
 
-    <p>
-    <%= link_to "Cancel", posts_path %>
-    </p>
+    <p> <%= link_to "Cancel", posts_path %> </p>
 
   </div>
+
 </div>

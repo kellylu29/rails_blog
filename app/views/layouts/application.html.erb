@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsBlog</title>
+    <title>Rails Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <%= csrf_meta_tags %>
 
@@ -10,8 +10,10 @@
   </head>
 
   <body>
+
+<!-- Navbar -->
     <div class="nav">
-      <ul class="nav navbar-nav">
+      <ul>
         <li><a href="/">Home</a></li>
           <% if current_user %>
             <li><a href="/posts">All Posts</a></li>
@@ -25,11 +27,7 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="current-user">
-      <p>
-        Current User: <%= current_user ? current_user.username : "No user signed in." %>
-      </p>
-    </div> -->
+
     <%= yield %>
 
   </body>

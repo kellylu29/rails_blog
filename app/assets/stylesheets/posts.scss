@@ -1,42 +1,34 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.posts-container {
+
+// Styles for all posts pages
+.posts-page {
   width: 100%;
   margin-top: 20px;
 }
 
-.posts-container a {
+.posts-page a {
   color: #7BFFC8;
 }
 
-.posts-container a:hover {
+.posts-page a:hover {
   color: #333;
 }
 
-.all-posts {
+// Styles for posts/index & posts/show
+.show-posts {
   text-align: center;
   width: 60%;
   margin: 0 auto;
-}
-
-.each-post{
-  border: 1px solid #333;
-  margin: 20px;
-  padding: 10px 0px 0px 10px;;
-  text-align: left;
-}
-
-h3 {
-  font-size: 2em;
-  text-transform: uppercase;
 }
 
 h3, h4, p {
   margin: 10px 10px 0px 10px;
 }
 
-.new-post {
+// Styles for posts/new & posts/edit
+.submit-post {
   width: 60%;
   margin: 30px auto;
   text-align: center;
@@ -44,6 +36,7 @@ h3, h4, p {
   padding: 10px;
 }
 
+// Form styles
 form {
   margin: 20px;
 }
@@ -69,7 +62,9 @@ form {
     background-color: #7BFFC8;
     cursor: pointer;
 }
+// End form styles
 
+// Comment styles
 .each-comment{
   border: 1px solid #333;
   margin: 20px;

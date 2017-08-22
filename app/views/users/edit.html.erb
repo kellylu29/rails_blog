@@ -1,4 +1,4 @@
-<div class="users_container">
+<div class="users_pages">
   <div class="edit-user">
     <h3>Edit</h3>
 
@@ -15,9 +15,7 @@
       <%= f.submit 'Submit Changes', :class => 'submit'%>
     <% end %>
 
-  <p>
-  <%= link_to "Back to Profile", user_path(@user) %>
-  </p>
+    <p> <%= link_to "Back to Profile", user_path(@user) %> </p>
 
   </div>
 </div>
